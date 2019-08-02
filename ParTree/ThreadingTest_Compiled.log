@@ -1,0 +1,50 @@
+running  2  threads Compiled
+./compiledThreads 2
+times:  [5.0, 5.0, 6.0, 6.0, 5.0, 5.0, 5.0, 5.0, 6.0, 5.0]
+mean:  5.3 [s] stdev:  0.48304589154  [s]
+ 
+running  4  threads Compiled
+./compiledThreads 4
+times:  [4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0]
+mean:  4.0 [s] stdev:  0.0  [s]
+ 
+running  6  threads Compiled
+./compiledThreads 6
+times:  [4.0, 5.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0]
+mean:  4.0 [s] stdev:  0.471404520791  [s]
+ 
+running  8  threads Compiled
+./compiledThreads 8
+times:  [4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0]
+mean:  4.0 [s] stdev:  0.0  [s]
+ 
+running  10  threads Compiled
+./compiledThreads 10
+times:  [4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0]
+mean:  4.0 [s] stdev:  0.0  [s]
+ 
+running  12  threads Compiled
+./compiledThreads 12
+times:  [4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0]
+mean:  4.0 [s] stdev:  0.0  [s]
+ 
+running  14  threads Compiled
+./compiledThreads 14
+times:  [4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0]
+mean:  4.0 [s] stdev:  0.0  [s]
+ 
+running  16  threads Compiled
+./compiledThreads 16
+times:  [4.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0]
+mean:  4.1 [s] stdev:  0.316227766017  [s]
+ 
+running  18  threads Compiled
+./compiledThreads 18
+times:  [4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 5.0, 4.0, 4.0, 4.0]
+mean:  4.1 [s] stdev:  0.316227766017  [s]
+ 
+running  20  threads Compiled
+./compiledThreads 20
+times:  [4.0, 4.0, 4.0, 4.0, 5.0, 4.0, 4.0, 4.0, 4.0, 4.0]
+mean:  4.1 [s] stdev:  0.316227766017  [s]
+ 

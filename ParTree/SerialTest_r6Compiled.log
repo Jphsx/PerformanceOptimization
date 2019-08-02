@@ -1,0 +1,5 @@
+running Serial program with ttreereader compiled
+./compiledSerialr6
+times:  [9.0, 9.0, 10.0, 9.0, 9.0, 9.0, 9.0, 9.0, 10.0, 9.0]
+mean:  9.2 [s] stdev:  0.421637021356  [s]
+ 

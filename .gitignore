@@ -1,0 +1,12 @@
+*.root
+*.d 
+*.out
+*.nav
+*.aux
+*.toc
+*.snm
+*.gz
+
+
+compiledSerialr6
+compiledThreads
