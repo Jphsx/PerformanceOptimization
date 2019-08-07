@@ -60,8 +60,8 @@ int plotPerf(){
 	double timeserrx_int [] = {0,0,0,0,0,0,0,0,0,0,0};
 	int n = 11;
 
-	double times_com [] = { 27.8, 20, 8.8, 7.2, 7, 7, 11, 8.4, 9.4, 14.2, 13};
-	double timeserr_com [] = { 5.2, 11.8, 0.4, 0.4, 0.7, 0.7, 6.7, 0.5, 0.9, 6.0, 2.3 };
+	double times_com [] = { 27.8, 15.2, 18.2, 7.6, 6.8, 7.2, 9.8, 8.2, 9.0, 10.2, 11.2};
+	double timeserr_com [] = { 5.2, 1.1, 15.9, 0.5, 0.4, 0.4, 2.5, 0.8, 0.0, 1.1, 0.8 };
 
 
 	double nthreads_classic [] = {0};

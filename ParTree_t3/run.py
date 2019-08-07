@@ -179,12 +179,27 @@ def runProcess(cmd):
 
 
 #do serial test compiled with classic approach
-cmd = "python runmacroclassic.py 0"
-print cmd
-dTs = []
-for i in range(5):
-	deltaTime = runProcess(cmd)
-	dTs.append(deltaTime)
-print "times: ", dTs
-print "mean: ", mean(dTs), "[s] stdev: ", stdev(dTs) ," [s]"
-print " "
+#cmd = "python runmacroclassic.py 0"
+#print cmd
+#dTs = []
+#for i in range(5):
+#	deltaTime = runProcess(cmd)
+#	dTs.append(deltaTime)
+#print "times: ", dTs
+#print "mean: ", mean(dTs), "[s] stdev: ", stdev(dTs) ," [s]"
+#print " "
+
+
+#do parallel test compiled with varying datasize
+for datasize in range(1,10,1):
+	print "running", datasize, "datasize, multithreading compiled with 6 threads"
+	cmd = "python runmacro.py "+str(datasize)+" 8"
+	dTs = []
+	for i in range(5):
+		deltaTime = runProcess(cmd)
+		dTs.append(deltaTime)
+	print "times: ", dTs
+	print "mean: ", mean(dTs), "[s] stdev: ", stdev(dTs) ," [s]"
+	print " "
+
+	
