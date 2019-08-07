@@ -1,0 +1,259 @@
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_100.root","./classicFiles/Run2018_100.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_110.root","./classicFiles/Run2018_110.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_120.root","./classicFiles/Run2018_120.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_130.root","./classicFiles/Run2018_130.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_141.root","./classicFiles/Run2018_141.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_155.root","./classicFiles/Run2018_155.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_166.root","./classicFiles/Run2018_166.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_176.root","./classicFiles/Run2018_176.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_193.root","./classicFiles/Run2018_193.root")...
+(int) 0
+hadd Target file: ./combinedClassic.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ./classicFiles/Run2018_100.root
+hadd Source file 2: ./classicFiles/Run2018_110.root
+hadd Source file 3: ./classicFiles/Run2018_120.root
+hadd Source file 4: ./classicFiles/Run2018_130.root
+hadd Source file 5: ./classicFiles/Run2018_141.root
+hadd Source file 6: ./classicFiles/Run2018_155.root
+hadd Source file 7: ./classicFiles/Run2018_166.root
+hadd Source file 8: ./classicFiles/Run2018_176.root
+hadd Source file 9: ./classicFiles/Run2018_193.root
+hadd Target path: ./combinedClassic.root:/
+['/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_100.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_110.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_120.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_130.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_141.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_155.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_166.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_176.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_193.root']
+('from runmacro numFiles == ', 9)
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_100.root\",\"./classicFiles/Run2018_100.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_110.root\",\"./classicFiles/Run2018_110.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_120.root\",\"./classicFiles/Run2018_120.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_130.root\",\"./classicFiles/Run2018_130.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_141.root\",\"./classicFiles/Run2018_141.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_155.root\",\"./classicFiles/Run2018_155.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_166.root\",\"./classicFiles/Run2018_166.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_176.root\",\"./classicFiles/Run2018_176.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_193.root\",\"./classicFiles/Run2018_193.root\")"
+hadd -f ./combinedClassic.root ./classicFiles/Run2018_100.root ./classicFiles/Run2018_110.root ./classicFiles/Run2018_120.root ./classicFiles/Run2018_130.root ./classicFiles/Run2018_141.root ./classicFiles/Run2018_155.root ./classicFiles/Run2018_166.root ./classicFiles/Run2018_176.root ./classicFiles/Run2018_193.root
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_100.root","./classicFiles/Run2018_100.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_110.root","./classicFiles/Run2018_110.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_120.root","./classicFiles/Run2018_120.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_130.root","./classicFiles/Run2018_130.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_141.root","./classicFiles/Run2018_141.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_155.root","./classicFiles/Run2018_155.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_166.root","./classicFiles/Run2018_166.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_176.root","./classicFiles/Run2018_176.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_193.root","./classicFiles/Run2018_193.root")...
+(int) 0
+hadd Target file: ./combinedClassic.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ./classicFiles/Run2018_100.root
+hadd Source file 2: ./classicFiles/Run2018_110.root
+hadd Source file 3: ./classicFiles/Run2018_120.root
+hadd Source file 4: ./classicFiles/Run2018_130.root
+hadd Source file 5: ./classicFiles/Run2018_141.root
+hadd Source file 6: ./classicFiles/Run2018_155.root
+hadd Source file 7: ./classicFiles/Run2018_166.root
+hadd Source file 8: ./classicFiles/Run2018_176.root
+hadd Source file 9: ./classicFiles/Run2018_193.root
+hadd Target path: ./combinedClassic.root:/
+['/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_100.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_110.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_120.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_130.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_141.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_155.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_166.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_176.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_193.root']
+('from runmacro numFiles == ', 9)
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_100.root\",\"./classicFiles/Run2018_100.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_110.root\",\"./classicFiles/Run2018_110.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_120.root\",\"./classicFiles/Run2018_120.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_130.root\",\"./classicFiles/Run2018_130.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_141.root\",\"./classicFiles/Run2018_141.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_155.root\",\"./classicFiles/Run2018_155.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_166.root\",\"./classicFiles/Run2018_166.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_176.root\",\"./classicFiles/Run2018_176.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_193.root\",\"./classicFiles/Run2018_193.root\")"
+hadd -f ./combinedClassic.root ./classicFiles/Run2018_100.root ./classicFiles/Run2018_110.root ./classicFiles/Run2018_120.root ./classicFiles/Run2018_130.root ./classicFiles/Run2018_141.root ./classicFiles/Run2018_155.root ./classicFiles/Run2018_166.root ./classicFiles/Run2018_176.root ./classicFiles/Run2018_193.root
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_100.root","./classicFiles/Run2018_100.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_110.root","./classicFiles/Run2018_110.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_120.root","./classicFiles/Run2018_120.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_130.root","./classicFiles/Run2018_130.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_141.root","./classicFiles/Run2018_141.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_155.root","./classicFiles/Run2018_155.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_166.root","./classicFiles/Run2018_166.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_176.root","./classicFiles/Run2018_176.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_193.root","./classicFiles/Run2018_193.root")...
+(int) 0
+hadd Target file: ./combinedClassic.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ./classicFiles/Run2018_100.root
+hadd Source file 2: ./classicFiles/Run2018_110.root
+hadd Source file 3: ./classicFiles/Run2018_120.root
+hadd Source file 4: ./classicFiles/Run2018_130.root
+hadd Source file 5: ./classicFiles/Run2018_141.root
+hadd Source file 6: ./classicFiles/Run2018_155.root
+hadd Source file 7: ./classicFiles/Run2018_166.root
+hadd Source file 8: ./classicFiles/Run2018_176.root
+hadd Source file 9: ./classicFiles/Run2018_193.root
+hadd Target path: ./combinedClassic.root:/
+['/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_100.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_110.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_120.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_130.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_141.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_155.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_166.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_176.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_193.root']
+('from runmacro numFiles == ', 9)
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_100.root\",\"./classicFiles/Run2018_100.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_110.root\",\"./classicFiles/Run2018_110.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_120.root\",\"./classicFiles/Run2018_120.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_130.root\",\"./classicFiles/Run2018_130.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_141.root\",\"./classicFiles/Run2018_141.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_155.root\",\"./classicFiles/Run2018_155.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_166.root\",\"./classicFiles/Run2018_166.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_176.root\",\"./classicFiles/Run2018_176.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_193.root\",\"./classicFiles/Run2018_193.root\")"
+hadd -f ./combinedClassic.root ./classicFiles/Run2018_100.root ./classicFiles/Run2018_110.root ./classicFiles/Run2018_120.root ./classicFiles/Run2018_130.root ./classicFiles/Run2018_141.root ./classicFiles/Run2018_155.root ./classicFiles/Run2018_166.root ./classicFiles/Run2018_176.root ./classicFiles/Run2018_193.root
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_100.root","./classicFiles/Run2018_100.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_110.root","./classicFiles/Run2018_110.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_120.root","./classicFiles/Run2018_120.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_130.root","./classicFiles/Run2018_130.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_141.root","./classicFiles/Run2018_141.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_155.root","./classicFiles/Run2018_155.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_166.root","./classicFiles/Run2018_166.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_176.root","./classicFiles/Run2018_176.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_193.root","./classicFiles/Run2018_193.root")...
+(int) 0
+hadd Target file: ./combinedClassic.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ./classicFiles/Run2018_100.root
+hadd Source file 2: ./classicFiles/Run2018_110.root
+hadd Source file 3: ./classicFiles/Run2018_120.root
+hadd Source file 4: ./classicFiles/Run2018_130.root
+hadd Source file 5: ./classicFiles/Run2018_141.root
+hadd Source file 6: ./classicFiles/Run2018_155.root
+hadd Source file 7: ./classicFiles/Run2018_166.root
+hadd Source file 8: ./classicFiles/Run2018_176.root
+hadd Source file 9: ./classicFiles/Run2018_193.root
+hadd Target path: ./combinedClassic.root:/
+['/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_100.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_110.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_120.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_130.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_141.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_155.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_166.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_176.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_193.root']
+('from runmacro numFiles == ', 9)
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_100.root\",\"./classicFiles/Run2018_100.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_110.root\",\"./classicFiles/Run2018_110.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_120.root\",\"./classicFiles/Run2018_120.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_130.root\",\"./classicFiles/Run2018_130.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_141.root\",\"./classicFiles/Run2018_141.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_155.root\",\"./classicFiles/Run2018_155.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_166.root\",\"./classicFiles/Run2018_166.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_176.root\",\"./classicFiles/Run2018_176.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_193.root\",\"./classicFiles/Run2018_193.root\")"
+hadd -f ./combinedClassic.root ./classicFiles/Run2018_100.root ./classicFiles/Run2018_110.root ./classicFiles/Run2018_120.root ./classicFiles/Run2018_130.root ./classicFiles/Run2018_141.root ./classicFiles/Run2018_155.root ./classicFiles/Run2018_166.root ./classicFiles/Run2018_176.root ./classicFiles/Run2018_193.root
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_100.root","./classicFiles/Run2018_100.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_110.root","./classicFiles/Run2018_110.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_120.root","./classicFiles/Run2018_120.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_130.root","./classicFiles/Run2018_130.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_141.root","./classicFiles/Run2018_141.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_155.root","./classicFiles/Run2018_155.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_166.root","./classicFiles/Run2018_166.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_176.root","./classicFiles/Run2018_176.root")...
+(int) 0
+
+Processing classic_TreeProcessing.c("/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_193.root","./classicFiles/Run2018_193.root")...
+(int) 0
+hadd Target file: ./combinedClassic.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ./classicFiles/Run2018_100.root
+hadd Source file 2: ./classicFiles/Run2018_110.root
+hadd Source file 3: ./classicFiles/Run2018_120.root
+hadd Source file 4: ./classicFiles/Run2018_130.root
+hadd Source file 5: ./classicFiles/Run2018_141.root
+hadd Source file 6: ./classicFiles/Run2018_155.root
+hadd Source file 7: ./classicFiles/Run2018_166.root
+hadd Source file 8: ./classicFiles/Run2018_176.root
+hadd Source file 9: ./classicFiles/Run2018_193.root
+hadd Target path: ./combinedClassic.root:/
+['/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_100.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_110.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_120.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_130.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_141.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_155.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_166.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_176.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_193.root']
+('from runmacro numFiles == ', 9)
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_100.root\",\"./classicFiles/Run2018_100.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_110.root\",\"./classicFiles/Run2018_110.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_120.root\",\"./classicFiles/Run2018_120.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_130.root\",\"./classicFiles/Run2018_130.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_141.root\",\"./classicFiles/Run2018_141.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_155.root\",\"./classicFiles/Run2018_155.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_166.root\",\"./classicFiles/Run2018_166.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_176.root\",\"./classicFiles/Run2018_176.root\")"
+root -l -b -q "classic_TreeProcessing.c(\"/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_193.root\",\"./classicFiles/Run2018_193.root\")"
+hadd -f ./combinedClassic.root ./classicFiles/Run2018_100.root ./classicFiles/Run2018_110.root ./classicFiles/Run2018_120.root ./classicFiles/Run2018_130.root ./classicFiles/Run2018_141.root ./classicFiles/Run2018_155.root ./classicFiles/Run2018_166.root ./classicFiles/Run2018_176.root ./classicFiles/Run2018_193.root
+python runmacroclassic.py 0
+times:  [299.0, 245.0, 256.0, 258.0, 269.0]
+mean:  265.4 [s] stdev:  20.6228029133  [s]
+ 

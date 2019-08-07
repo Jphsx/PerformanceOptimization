@@ -1,0 +1,4 @@
+./compiledSerialr6
+times:  [30.0, 24.0, 36.0, 24.0, 25.0]
+mean:  27.8 [s] stdev:  5.21536192416  [s]
+ 
