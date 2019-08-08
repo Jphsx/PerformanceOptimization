@@ -104,6 +104,55 @@ mg->Draw("AC*");
 
  c1->BuildLegend();
 
+
+
+  double ntracks [] = { 1547322., 950444., 602330., 347156., 1958272., 2968340., 1299172., 832024., 3685896. };
+  double ntracksum [9];
+  double ntrackserr [] = { 0,0,0,0,0,0,0,0,0};
+	int nfiles = 9;
+
+	//accumulate the tracks
+	ntracksum[0] = ntracks[0];
+	double accum = 0.;
+	for(int i=1; i<9; i++){
+		for(int j=0; j<=i; j++){
+			accum = accum + ntracks[j];
+		}
+		ntracksum[i] = accum;
+		accum = 0.;
+	}
+
+	double times_size_par [] = {3, 3, 3.6, 4.2, 4.4, 5.0, 5.6, 5.8, 9.6 };	
+	double timeserr_size_par [] = { 0.7, 0, 0.5, 1.1, 0.5, 1, 0.5, 0.4, 3.6};
+
+
+	double times_size_ser [] = {4.4, 6.0, 10.4, 7.8, 12.0, 15.0, 22.8, 17.4, 28.2};
+	double timeserr_size_ser [] = {0.5, 0, 7.6, 0.4, 2.3, 0 , 13.5, 0.9, 8.3};
+
+	TGraphErrors* g_size_par = new TGraphErrors(nfiles, ntracksum, times_size_par, ntrackserr, timeserr_size_par);
+	TGraphErrors* g_size_ser = new TGraphErrors(nfiles, ntracksum, times_size_ser, ntrackserr, timeserr_size_ser);
+
+
+	g_size_par->SetMarkerStyle(21);
+	g_size_par->SetLineColor(2);
+	g_size_par->SetTitle("Compiled Parallel");
+	g_size_ser->SetMarkerStyle(20);
+	g_size_ser->SetLineColor(4);
+	g_size_ser->SetTitle("Compiled Serial");
+
+
+  TMultiGraph *mg2 = new TMultiGraph();
+	mg2->Add(g_size_par,"lp");
+	mg2->Add(g_size_ser,"cp");
+	mg2->SetTitle("Processing Time With Varying Data Sizes;nTracks;Time[s]");
+	
+
+	
+
+   TCanvas *c2 = new TCanvas("c2","test 3 performance",200,10,500,300);
+
+	mg2->Draw("AC*");
+	c2->BuildLegend();
 return 0;
 
 }
