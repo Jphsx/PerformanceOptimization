@@ -191,9 +191,21 @@ def runProcess(cmd):
 
 
 #do parallel test compiled with varying datasize
+#for datasize in range(1,10,1):
+#	print "running", datasize, "datasize, multithreading compiled with 6 threads"
+#	cmd = "python runmacro.py "+str(datasize)+" 8"
+#	dTs = []
+#	for i in range(5):
+#		deltaTime = runProcess(cmd)
+#		dTs.append(deltaTime)
+#	print "times: ", dTs
+#	print "mean: ", mean(dTs), "[s] stdev: ", stdev(dTs) ," [s]"
+#	print " "
+
+#do sequential test compiled with varying datasize
 for datasize in range(1,10,1):
-	print "running", datasize, "datasize, multithreading compiled with 6 threads"
-	cmd = "python runmacro.py "+str(datasize)+" 8"
+	print "running", datasize, "datasize, sequential compiled"
+	cmd = "python runmacro.py "+str(datasize)
 	dTs = []
 	for i in range(5):
 		deltaTime = runProcess(cmd)
@@ -201,5 +213,6 @@ for datasize in range(1,10,1):
 	print "times: ", dTs
 	print "mean: ", mean(dTs), "[s] stdev: ", stdev(dTs) ," [s]"
 	print " "
+
 
 	

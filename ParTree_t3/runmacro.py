@@ -22,13 +22,15 @@ print(idatafiles)
 numFiles = int(sys.argv[1]) 
 ifile = 1
 
-nthreads = sys.argv[2]
-
+#nthreads = sys.argv[2]
+nthreads = 0
 
 if (numFiles == 0 ):
 	numFiles = len(idatafiles)
 print( "from runmacro numFiles == ", numFiles," nthreads == ",nthreads)
-cmd = "./compiledThreads "+str(nthreads)+" "
+#cmd = "./compiledThreads "+str(nthreads)+" "
+#command for serial
+cmd = "./compiledSerialr6 " 
 for f in idatafiles:
 	if (ifile <= numFiles):
 		pathsplit = f.split("/")

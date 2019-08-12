@@ -12,7 +12,7 @@
 //int r6_TreeProcessing(){
 int main(int argc, char* argv[]){
 
-
+//argv multiple 
 	TFile* outfile = new TFile("test0.root", "RECREATE");
 	  TH1D* ptHist = new TH1D("pt_dist", "p_{T} Distribution;p_{T};dN/p_{T}dp_{T}", 100, 0, 5);
 	  TH1D* pzHist = new TH1D("pz_dist", "p_{Z} Distribution;p_{Z};dN/dp_{Z}", 100, 0, 5);
@@ -21,7 +21,12 @@ int main(int argc, char* argv[]){
 
   // TFile *myFile = TFile::Open("tp_process_imt.root");
   	TChain* tc = new TChain("MyNtupleMaking/PhotonConversionsTree");
-	tc->Add("/home/t3-ku/janguian/performanceOptimization/PerformanceOptimization/ParTree_t3/datalinks/*.root");
+
+	//tc->Add("/home/t3-ku/janguian/performanceOptimization/PerformanceOptimization/ParTree_t3/datalinks/*.root");
+
+	for(int i=1; i< argc; i++){
+		tc->Add(argv[i]);
+	}
 
    // Create a TTreeReader for the tree, for instance by passing the
    // TTree's name and the TDirectory / TFile it is in.

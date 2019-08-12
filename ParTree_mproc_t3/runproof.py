@@ -22,7 +22,7 @@ print(idatafiles)
 
 cmd = "./compiledproofmacro "
 for ifile in idatafiles:
-	cmd = cmd + idatafiles + " "
+	cmd = cmd + ifile + " "
 
 
 print cmd
