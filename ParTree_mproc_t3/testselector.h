@@ -15,6 +15,8 @@
 #include <TTreeReader.h>
 #include <TTreeReaderValue.h>
 #include <TTreeReaderArray.h>
+#include <TH1D.h>
+#include <TH2D.h>
 
 // Headers needed by this particular selector
 #include <vector>
@@ -25,6 +27,11 @@ class testselector : public TSelector {
 public :
    TTreeReader     fReader;  //!the tree reader
    TTree          *fChain = 0;   //!pointer to the analyzed TTree or TChain
+
+
+	TH1D *ptHist, *pzHist;
+	TH2D *pxpyHist;
+	TFile *outfile;
 
    // Readers to access the data (delete the ones you do not need).
    TTreeReaderValue<Bool_t> isRealData = {fReader, "isRealData"};

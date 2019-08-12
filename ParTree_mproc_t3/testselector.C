@@ -34,7 +34,7 @@ void testselector::Begin(TTree * /*tree*/)
    // The Begin() function is called at the start of the query.
    // When running with PROOF Begin() is only called on the client.
    // The tree argument is deprecated (on PROOF 0 is passed).
-
+   outfile = new TFile("testmproc.root", "RECREATE");
    TString option = GetOption();
 }
 
@@ -45,6 +45,14 @@ void testselector::SlaveBegin(TTree * /*tree*/)
    // The tree argument is deprecated (on PROOF 0 is passed).
 
    TString option = GetOption();
+	ptHist = new TH1D("pt_dist", "p_{T} Distribution;p_{T};dN/p_{T}dp_{T}", 100, 0, 5);
+	pzHist = new TH1D("pz_dist", "p_{Z} Distribution;p_{Z};dN/dp_{Z}", 100, 0, 5);
+	pxpyHist= new TH2D("px_py", "p_{X} vs p_{Y} Distribution;p_{X};p_{Y}", 100, -5., 5., 100, -5., 5.);
+
+		
+	GetOutputList()->Add(ptHist);
+	GetOutputList()->Add(pzHist);
+	GetOutputList()->Add(pxpyHist);
 
 }
 
@@ -68,6 +76,33 @@ Bool_t testselector::Process(Long64_t entry)
 
    fReader.SetEntry(entry);
 
+
+
+  auto pt = PC_vTrack_pt.begin();
+  auto phi = PC_vTrack_phi.begin();
+  auto eta = PC_vTrack_eta.begin();
+
+	double px,py,pz;
+   for(pt ;  pt != PC_vTrack_pt.end() ; ++pt){
+ 	
+		px = *pt * cos(*phi);
+  	    py = *pt * sin(*phi);
+        pz = *pt * sinh(*eta);
+
+		ptHist->Fill(*pt);
+		pzHist->Fill(pz);
+		PxpyHist->Fill(px,py);
+
+		++eta;
+		++phi;
+ 	}
+
+ 
+ 		
+
+
+
+
    return kTRUE;
 }
 
@@ -84,5 +119,7 @@ void testselector::Terminate()
    // The Terminate() function is the last function to be called during
    // a query. It always runs on the client, it can be used to present
    // the results graphically or save the results to file.
+	ptHist->Draw();
+	outfile->Write();
 
 }
