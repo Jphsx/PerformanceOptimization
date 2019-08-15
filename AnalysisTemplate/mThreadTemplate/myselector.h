@@ -8,7 +8,7 @@
 #ifndef myselector_h
 #define myselector_h
 
-#include <TROOT.h>
+//#include <TROOT.h>
 #include <TChain.h>
 #include <TFile.h>
 #include <TSelector.h>
@@ -124,11 +124,22 @@ public :
    TTreeReaderArray<vector<double>> PC_fTrack_phi = {fReader, "PC_fTrack_phi"};
 
 
-   //myselector(TTree * /*tree*/ =0) { }
+   myselector(TTree * /*tree*/ =0) { }
   // myselector(TTreeReader myreader) { fReader = myreader; }
-myselector(TTreeReader& myreader);
+// explicit myselector(TTreeReader& myreader);
+//myselector(TTreeReader& myreader);
+//	myselector(const myselector&) = delete;
+//	myselector& operator=(const myselector&)= delete;
+ //  ~myselector() = default;
 //	myselector(const myselector&) = delete; 
  //myselector(TTreeReader& myreader) { fReader = myreader; }
+       //explicit UserQueues();
+        //UserQueues(const UserQueues&) = delete;
+        //UserQueues& operator=(const UserQueues&) = delete;
+        //~UserQueues() = default;
+
+
+
    virtual ~myselector() { }
    virtual Int_t   Version() const { return 2; }
    virtual void    Begin(TTree *tree);
@@ -144,7 +155,7 @@ myselector(TTreeReader& myreader);
    virtual void    SlaveTerminate();
    virtual void    Terminate();
 
-   ClassDef(myselector,1);
+  // ClassDef(myselector,1);
    //ClassImp(myselector);
 
 };
@@ -152,9 +163,9 @@ myselector(TTreeReader& myreader);
 #endif
 
 #ifdef myselector_cxx
-myselector::myselector(TTreeReader& myreader){
-	fReader = std::move(myreader);
-}
+//myselector::myselector(TTreeReader& myreader){
+//	fReader = myreader;
+//}
 void myselector::Init(TTree *tree)
 {
    // The Init() function is called when the selector needs to initialize

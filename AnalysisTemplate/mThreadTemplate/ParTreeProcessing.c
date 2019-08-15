@@ -14,6 +14,8 @@
 #include "TFile.h"
 #include "histset.c"
 #include "myselector.C"
+#include <iostream>
+//#include "mytreevalues.c"
 //#include "TLorentzVector.h"
 //storage for threaded objects
 //std::vector<ROOT::TThreadedObject<TH1F> > th1vec{};
@@ -33,33 +35,8 @@ int main(int argc, char *argv[])
 	ifilelist.push_back(std::string_view(argv[i]));
    }
 
-
-/*	TFile *ifile = new TFile(ifilename.c_str()); 
-	TDirectory * idir = (TDirectory*)ifile->Get((ifilename+":/MyNtupleMaking").c_str());
-	TTree *tree;
-	idir->GetObject("PhotonConversionsTree", tree);	
-*/
-//	std::cout<<"test print tree"<<std::endl;
-//	tree->Print();		
-   // Create one TThreadedObject per histogram to fill during the processing of the tree
- //  ROOT::TThreadedObject<TH1F> ptHist("pt_dist", "p_{T} Distribution;p_{T};dN/p_{T}dp_{T}", 100, 0, 5);
- //  ROOT::TThreadedObject<TH1F> pzHist("pz_dist", "p_{Z} Distribution;p_{Z};dN/dp_{Z}", 100, 0, 5);
- //  ROOT::TThreadedObject<TH2F> pxpyHist("px_py", "p_{X} vs p_{Y} Distribution;p_{X};p_{Y}", 100, -5., 5., 100, -5., 5.);
-
-/*
-	CreateThreadObject("pt_dist", "p_{T} Distribution;p_{T};dN/p_{T}dp_{T}", 100, 0, 5);
-	CreateThreadObject("pz_dist", "p_{Z} Distribution;p_{Z};dN/dp_{Z}", 100, 0, 5);
-	CreateThreadObject("px_py", "p_{X} vs p_{Y} Distribution;p_{X};p_{Y}", 100, -5., 5., 100, -5., 5.);
-*/
-
- //  ROOT::TThreadedObject<TH1D> ptHist("pt_dist", "p_{T} Distribution;p_{T};dN/p_{T}dp_{T}", 100, 0, 5);
- //  ROOT::TThreadedObject<TH1D> pzHist("pz_dist", "p_{Z} Distribution;p_{Z};dN/dp_{Z}", 100, 0, 5);
- //  ROOT::TThreadedObject<TH2D> pxpyHist("px_py", "p_{X} vs p_{Y} Distribution;p_{X};p_{Y}", 100, -5., 5., 100, -5., 5.);
-
 	histset h;
- //  BookkeepThreadObject( ptHist);
-  // BookkeepThreadObject( pzHist);
-  // BookkeepThreadObject( pxpyHist);
+
 
    // Create a TTreeProcessorMT: specify the file and the tree in it
 //   ROOT::TTreeProcessorMT tp("tp_process_imt.root", "events");
@@ -79,7 +56,11 @@ int main(int argc, char *argv[])
 //	TTreeReaderValue< std::vector<std::vector<double> > > tracksetaRV(myReader, "PC_vTrack_eta");
 //	TTreeReaderValue< std::vector<std::vector<double> > > tracksphiRV(myReader, "PC_vTrack_phi");
 //	myselector s = new myselector(myReader);
-        myselector s;
+     //   myselector s(myReader);
+	  //  s.fReader.SetTree(tree)
+	// mytreevalues tv;
+	myselector s;
+	s.Init(myReader.GetTree());
 
 //	TTreeReaderValue<std::vector<TLorentzVector>> tracksRV(myReader, "tracks");
       // For performance reasons, a copy of the pointer associated to this thread on the
@@ -99,9 +80,33 @@ int main(int argc, char *argv[])
 //	 auto trackspt = *tracksptRV;
 //	 auto trackseta = *tracksetaRV;
   //	 auto tracksphi = *tracksphiRV;
-	std::vector<std::vector<double> > trackspt = *(s.PC_vTrack_pt);
-	std::vector<std::vector<double> > trackseta = *(s.PC_vTrack_eta);
-	std::vector<std::vector<double> > tracksphi = *(s.PC_vTrack_phi);
+	s.fReader.SetEntry(myReader.GetCurrentEntry());
+    
+//	std::vector<std::vector<double> > trackspt =  (s.PC_vTrack_pt);
+//	std::vector<std::vector<double> > trackseta = (s.PC_vTrack_eta);
+//	std::vector<std::vector<double> > tracksphi = (s.PC_vTrack_phi);
+
+	//TTreeReaderArray<std::vector<double> > ta_trackspt = s.PC_vTrack_pt;
+	//std::vector<std::vector<double> >::iterator trackspt = 
+	auto trackspt = s.PC_vTrack_pt.begin();
+	int i=0;
+	int j=0;
+	double px,py,pz;
+	for( auto itr = s.PC_vTrack_pt.begin() ; trackspt != s.PC_vTrack_pt.end(); ++itr){
+        for( auto itrj = itr->begin(); itrj != itr->end(); ++itrj){
+			px = s.PC_vTrack_pt[i][j] * cos( s.PC_vTrack_phi[i][j] );
+      	    py = s.PC_vTrack_pt[i][j] * sin( s.PC_vTrack_phi[i][j] );
+            pz = s.PC_vTrack_pt[i][j] * sinh( s.PC_vTrack_eta[i][j] );
+
+                myPtHist->Fill(s.PC_vTrack_pt[i][j]);
+                myPzHist->Fill(pz);
+                myPxPyHist->Fill(px,py);
+                        j++;
+
+
+		}
+		i++;
+	}
 
 /*         for (auto &&track : tracks) {
             myPtHist->Fill(track.Pt(), 1. / track.Pt());
@@ -110,7 +115,7 @@ int main(int argc, char *argv[])
          }
 */
 	
-	for( unsigned int i=0; i<trackspt.size(); i++){
+/*	for( unsigned int i=0; i<trackspt.size(); i++){
 		for( unsigned int j=0; j<trackspt.at(i).size(); j++){
 			px = trackspt.at(i).at(j) * cos(tracksphi.at(i).at(j));
 			py = trackspt.at(i).at(j) * sin(tracksphi.at(i).at(j));
@@ -121,11 +126,26 @@ int main(int argc, char *argv[])
 			myPzHist->Fill(pz);
 		}
 	}
+*/
+/*
+	for( unsigned int i=0; i<s.PC_vTrack_pt.size(); i++){
+		for( unsigned int j=0; j<s.PC_vTrack_pt.at(i).size(); j++){
+			//px = trackspt.at(i).at(j) * cos(tracksphi.at(i).at(j));
+			//py = trackspt.at(i).at(j) * sin(tracksphi.at(i).at(j));
+			//pz = trackspt.at(i).at(j) * sinh(trackseta.at(i).at(j));
+//			std::cout<<"px py pz"<<px<<" "<<py<<" "<<pz<<std::endl;
+			//myPtHist->Fill( trackspt.at(i).at(j), 1./ trackspt.at(i).at(j) );
+			//myPxPyHist->Fill(px,py);
+			//myPzHist->Fill(pz);
+		}
+	}
+*/
 	
       }
    };
 //	std::cout<<"launch function"<<std::endl;
    // Launch the parallel processing of the tree
+	std::cout<<"here"<<std::endl;
    tp.Process(myFunction);
    // Use the TThreadedObject::Merge method to merge the thread private histograms
    // into the final result
