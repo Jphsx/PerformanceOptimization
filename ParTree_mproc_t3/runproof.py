@@ -12,9 +12,9 @@ def bash( bashCommand ):
 
 
 #input file list
-idatalist = open("data.list", "r")
+#idatalist = open("data.list", "r")
 #idatalist = open("datasmall.list", "r")
-
+idatalist = open("bigdata.list","r")
 
 idatafiles = [f.rstrip() for f in idatalist if ".root" in f ]
 print(idatafiles)

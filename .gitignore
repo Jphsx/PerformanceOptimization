@@ -6,8 +6,9 @@
 *.toc
 *.snm
 *.gz
-
+*.o
 
 compiledSerialr6
 compiledThreads
 compiledproofmacro
+compiledthreads

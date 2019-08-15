@@ -1,12 +1,12 @@
 //////////////////////////////////////////////////////////
 // This class has been automatically generated on
-// Thu Aug  8 18:17:24 2019 by ROOT version 6.12/07
+// Wed Aug 14 22:05:59 2019 by ROOT version 6.12/07
 // from TTree PhotonConversionsTree/PhotonConversionsTree
 // found on file: /home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_100.root
 //////////////////////////////////////////////////////////
 
-#ifndef testselector_h
-#define testselector_h
+#ifndef myselector_h
+#define myselector_h
 
 #include <TROOT.h>
 #include <TChain.h>
@@ -15,23 +15,16 @@
 #include <TTreeReader.h>
 #include <TTreeReaderValue.h>
 #include <TTreeReaderArray.h>
-#include <TH1D.h>
-#include <TH2D.h>
-#include <math.h>
+
 // Headers needed by this particular selector
 #include <vector>
+
 using namespace std;
 
-
-class testselector : public TSelector {
+class myselector : public TSelector {
 public :
    TTreeReader     fReader;  //!the tree reader
    TTree          *fChain = 0;   //!pointer to the analyzed TTree or TChain
-
-
-	TH1D *ptHist, *pzHist;
-	TH2D *pxpyHist;
-	TFile *outfile;
 
    // Readers to access the data (delete the ones you do not need).
    TTreeReaderValue<Bool_t> isRealData = {fReader, "isRealData"};
@@ -131,8 +124,12 @@ public :
    TTreeReaderArray<vector<double>> PC_fTrack_phi = {fReader, "PC_fTrack_phi"};
 
 
-   testselector(TTree * /*tree*/ =0): ptHist(0), pzHist(0), pxpyHist(0) { }
-   virtual ~testselector() { }
+   //myselector(TTree * /*tree*/ =0) { }
+  // myselector(TTreeReader myreader) { fReader = myreader; }
+myselector(TTreeReader& myreader);
+//	myselector(const myselector&) = delete; 
+ //myselector(TTreeReader& myreader) { fReader = myreader; }
+   virtual ~myselector() { }
    virtual Int_t   Version() const { return 2; }
    virtual void    Begin(TTree *tree);
    virtual void    SlaveBegin(TTree *tree);
@@ -147,14 +144,18 @@ public :
    virtual void    SlaveTerminate();
    virtual void    Terminate();
 
-   ClassDef(testselector,0);
+   ClassDef(myselector,1);
+   //ClassImp(myselector);
 
 };
 
 #endif
 
-#ifdef testselector_cxx
-void testselector::Init(TTree *tree)
+#ifdef myselector_cxx
+myselector::myselector(TTreeReader& myreader){
+	fReader = std::move(myreader);
+}
+void myselector::Init(TTree *tree)
 {
    // The Init() function is called when the selector needs to initialize
    // a new tree or chain. Typically here the reader is initialized.
@@ -166,7 +167,7 @@ void testselector::Init(TTree *tree)
    fReader.SetTree(tree);
 }
 
-Bool_t testselector::Notify()
+Bool_t myselector::Notify()
 {
    // The Notify() function is called when a new file is opened. This
    // can be either for a new TTree in a TChain or when when a new TTree
@@ -178,4 +179,4 @@ Bool_t testselector::Notify()
 }
 
 
-#endif // #ifdef testselector_cxx
+#endif // #ifdef myselector_cxx
