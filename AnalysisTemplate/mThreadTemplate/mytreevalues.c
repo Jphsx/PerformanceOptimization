@@ -95,6 +95,9 @@ mytreevalues::mytreevalues(TTreeReader& reader){
    PC_vTrack_pt = new TTreeReaderArray<vector<double>>(reader, "PC_vTrack_pt"); 
    PC_vTrack_eta= new TTreeReaderArray<vector<double>>(reader, "PC_vTrack_eta");
    PC_vTrack_phi= new TTreeReaderArray<vector<double>>(reader, "PC_vTrack_phi"); 
+  //PC_vTrack_pt(reader,"PC_vTrack_pt");
+  //PC_vTrack_eta(reader,"PC_vTrack_eta");
+  //PC_vTrack_phi(reader,"PC_vTrack_phi");
 }
 
 
