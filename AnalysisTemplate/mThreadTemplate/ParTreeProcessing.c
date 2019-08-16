@@ -51,19 +51,64 @@ int main(int argc, char *argv[])
  //  std::cout<<"here"<<std::endl;
    auto myFunction = [&](TTreeReader &myReader) {
 
-//	myselector s;
-//	s.Init(myReader.GetTree());
-  	mytreevalues s( myReader );
+  // TTreeReaderArray<vector<double>> PC_vTrack_pt(myReader, "PC_vTrack_pt");
+//   TTreeReaderArray<vector<double>> PC_vTrack_eta(myReader, "PC_vTrack_eta");
+//   TTreeReaderArray<vector<double>> PC_vTrack_phi(myReader, "PC_vTrack_phi");
+//     TTreeReaderValue< std::vector<std::vector<double> > > PC_vTrack_pt(myReader, "PC_vTrack_pt");
+
+	myselector s;
+//	s.fReader = std::move(myReader;
+	s.Init(myReader.GetTree());
+//  	mytreevalues s( myReader );
 	
 //	double px,py,pz;
 //std::cout<<"about to loop"<<std::endl;
       while (myReader.Next()) {
-       
 
-	//s.fReader.SetEntry(myReader.GetCurrentEntry());
- 
-
+	s.fReader.SetEntry(myReader.GetCurrentEntry());
 	h.AnalyzeEntry(s); 
+	//write analysis here:
+	
+       // int i=0;
+       // int j=0;
+  //      double px,py,pz;
+//	std::vector<std::vector<double> > trackspt = *PC_vTrack_pt;
+	//auto& trackspt = PC_vTrack_pt;	
+       // for( auto itr = s.PC_vTrack_pt.begin() ; itr != s.PC_vTrack_pt.end(); ++itr){
+                // for( auto itrj = itr->begin(); itrj != itr->end(); ++itrj){
+        // for( auto itr = *PC_vTrack_pt.begin() ; itr != *PC_vTrack_pt.end(); ++itr){
+          //       for( auto itrj = itr->begin(); itrj != itr->end(); ++itrj){
+	//	for(int i = 0; i< trackspt.size(); i++){
+	//		for( int j=0; j< trackspt[i].size(); j++){
+	//		std::cout<<trackspt[i][j]<<" ";
+	//		}
+ 	//	}	
+/* this loop works 	 for(int i=0; i<PC_vTrack_pt.GetSize(); i++){
+		for(int j=0; j<PC_vTrack_pt[i].size(); j++){
+			//std::cout<<PC_vTrack_pt[i][j]<<" ";
+
+			h.FillTH1(h.ind_ptHist, PC_vTrack_pt[i][j]);
+		}
+	}
+*/
+
+/*                        px = PC_vTrack_pt[i][j] * cos( PC_vTrack_phi[i][j] );
+                        py = PC_vTrack_pt[i][j] * sin( PC_vTrack_phi[i][j] );
+                        pz = PC_vTrack_pt[i][j] * sinh( PC_vTrack_eta[i][j] );
+
+                        h.FillTH1(h.ind_ptHist, PC_vTrack_pt[i][j]);
+                        h.FillTH1(h.ind_pzHist, pz);
+
+                      std::cout<<"pxpypz"<<px<<" "<<py<<" "<<pz<<std::endl;   
+          //                    FillTH2(ind_pxpyHist, px,py);
+               //       FillTH2(0,px,py); */
+              //          j++;
+            //     }
+          //       i++;
+
+        // }
+	
+
 	
       }
    };
