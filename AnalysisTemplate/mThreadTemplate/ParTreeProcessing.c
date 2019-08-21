@@ -1,4 +1,8 @@
 //#include "TROOT.h"
+//
+#ifndef PARTREE
+#define PARTREE
+
 #include "TH1D.h"
 #include "TH2D.h"
 #include "ROOT/TThreadedObject.hxx"
@@ -14,6 +18,7 @@
 #include "TFile.h"
 #include "histset.c"
 #include "myselector.C"
+#include "mytreevalues.c"
 #include <iostream>
 //#include "mytreevalues.c"
 //#include "TLorentzVector.h"
@@ -37,11 +42,6 @@ int main(int argc, char *argv[])
 
 	histset h;
 
-
-   // Create a TTreeProcessorMT: specify the file and the tree in it
-//   ROOT::TTreeProcessorMT tp("tp_process_imt.root", "events");
- //   ROOT::TTreeProcessorMT tp( *tree);THIS CONSTRUCTOR DOESNT WORK :(((((
-   // ROOT::TTreeProcessorMT tp(ifilename,"MyNtupleMaking/PhotonConversionsTree");
    ROOT::TTreeProcessorMT tp(ifilelist,"MyNtupleMaking/PhotonConversionsTree");
    // Define the function that will process a subrange of the tree.
    // The function must receive only one parameter, a TTreeReader,
@@ -50,120 +50,79 @@ int main(int argc, char *argv[])
    //
  //  std::cout<<"here"<<std::endl;
    auto myFunction = [&](TTreeReader &myReader) {
-    // TTreeReaderValue<std::vector<ROOT::Math::LorentzVector<ROOT::Math::PxPyPzE4D<double> > > > tracksRV(myReader, "tracks");
-//    std::cout<<"declare values"<<std::endl;
-    //	TTreeReaderValue< std::vector<std::vector<double> > > tracksptRV(myReader, "PC_vTrack_pt");
-//	TTreeReaderValue< std::vector<std::vector<double> > > tracksetaRV(myReader, "PC_vTrack_eta");
-//	TTreeReaderValue< std::vector<std::vector<double> > > tracksphiRV(myReader, "PC_vTrack_phi");
-//	myselector s = new myselector(myReader);
-     //   myselector s(myReader);
-	  //  s.fReader.SetTree(tree)
-	// mytreevalues tv;
+
+  // TTreeReaderArray<vector<double>> PC_vTrack_pt(myReader, "PC_vTrack_pt");
+//   TTreeReaderArray<vector<double>> PC_vTrack_eta(myReader, "PC_vTrack_eta");
+//   TTreeReaderArray<vector<double>> PC_vTrack_phi(myReader, "PC_vTrack_phi");
+//     TTreeReaderValue< std::vector<std::vector<double> > > PC_vTrack_pt(myReader, "PC_vTrack_pt");
+
 	myselector s;
+//	s.fReader = std::move(myReader;
 	s.Init(myReader.GetTree());
-
-//	TTreeReaderValue<std::vector<TLorentzVector>> tracksRV(myReader, "tracks");
-      // For performance reasons, a copy of the pointer associated to this thread on the
-      // stack is used
-    //  auto myPtHist = ptHist.Get();
-    //  auto myPzHist = pzHist.Get();
-    //  auto myPxPyHist = pxpyHist.Get();
-	auto myPtHist = h.ptHist->Get();
-	auto myPzHist = h.pzHist->Get();
-	auto myPxPyHist = h.pxpyHist->Get();
-
+//  	mytreevalues s( myReader );
 	
-	double px,py,pz;
+//	double px,py,pz;
 //std::cout<<"about to loop"<<std::endl;
       while (myReader.Next()) {
-        // auto tracks = *tracksRV;
-//	 auto trackspt = *tracksptRV;
-//	 auto trackseta = *tracksetaRV;
-  //	 auto tracksphi = *tracksphiRV;
+
 	s.fReader.SetEntry(myReader.GetCurrentEntry());
-    
-//	std::vector<std::vector<double> > trackspt =  (s.PC_vTrack_pt);
-//	std::vector<std::vector<double> > trackseta = (s.PC_vTrack_eta);
-//	std::vector<std::vector<double> > tracksphi = (s.PC_vTrack_phi);
-
-	//TTreeReaderArray<std::vector<double> > ta_trackspt = s.PC_vTrack_pt;
-	//std::vector<std::vector<double> >::iterator trackspt = 
-	auto trackspt = s.PC_vTrack_pt.begin();
-	int i=0;
-	int j=0;
-	double px,py,pz;
-	for( auto itr = s.PC_vTrack_pt.begin() ; trackspt != s.PC_vTrack_pt.end(); ++itr){
-        for( auto itrj = itr->begin(); itrj != itr->end(); ++itrj){
-			px = s.PC_vTrack_pt[i][j] * cos( s.PC_vTrack_phi[i][j] );
-      	    py = s.PC_vTrack_pt[i][j] * sin( s.PC_vTrack_phi[i][j] );
-            pz = s.PC_vTrack_pt[i][j] * sinh( s.PC_vTrack_eta[i][j] );
-
-                myPtHist->Fill(s.PC_vTrack_pt[i][j]);
-                myPzHist->Fill(pz);
-                myPxPyHist->Fill(px,py);
-                        j++;
-
-
-		}
-		i++;
-	}
-
-/*         for (auto &&track : tracks) {
-            myPtHist->Fill(track.Pt(), 1. / track.Pt());
-            myPxPyHist->Fill(track.Px(), track.Py());
-            myPzHist->Fill(track.Pz());
-         }
-*/
+	h.AnalyzeEntry(s); 
+	//write analysis here:
 	
-/*	for( unsigned int i=0; i<trackspt.size(); i++){
-		for( unsigned int j=0; j<trackspt.at(i).size(); j++){
-			px = trackspt.at(i).at(j) * cos(tracksphi.at(i).at(j));
-			py = trackspt.at(i).at(j) * sin(tracksphi.at(i).at(j));
-			pz = trackspt.at(i).at(j) * sinh(trackseta.at(i).at(j));
-//			std::cout<<"px py pz"<<px<<" "<<py<<" "<<pz<<std::endl;
-			myPtHist->Fill( trackspt.at(i).at(j), 1./ trackspt.at(i).at(j) );
-			myPxPyHist->Fill(px,py);
-			myPzHist->Fill(pz);
+       // int i=0;
+       // int j=0;
+  //      double px,py,pz;
+//	std::vector<std::vector<double> > trackspt = *PC_vTrack_pt;
+	//auto& trackspt = PC_vTrack_pt;	
+       // for( auto itr = s.PC_vTrack_pt.begin() ; itr != s.PC_vTrack_pt.end(); ++itr){
+                // for( auto itrj = itr->begin(); itrj != itr->end(); ++itrj){
+        // for( auto itr = *PC_vTrack_pt.begin() ; itr != *PC_vTrack_pt.end(); ++itr){
+          //       for( auto itrj = itr->begin(); itrj != itr->end(); ++itrj){
+	//	for(int i = 0; i< trackspt.size(); i++){
+	//		for( int j=0; j< trackspt[i].size(); j++){
+	//		std::cout<<trackspt[i][j]<<" ";
+	//		}
+ 	//	}	
+/* this loop works 	 for(int i=0; i<PC_vTrack_pt.GetSize(); i++){
+		for(int j=0; j<PC_vTrack_pt[i].size(); j++){
+			//std::cout<<PC_vTrack_pt[i][j]<<" ";
+
+			h.FillTH1(h.ind_ptHist, PC_vTrack_pt[i][j]);
 		}
 	}
 */
-/*
-	for( unsigned int i=0; i<s.PC_vTrack_pt.size(); i++){
-		for( unsigned int j=0; j<s.PC_vTrack_pt.at(i).size(); j++){
-			//px = trackspt.at(i).at(j) * cos(tracksphi.at(i).at(j));
-			//py = trackspt.at(i).at(j) * sin(tracksphi.at(i).at(j));
-			//pz = trackspt.at(i).at(j) * sinh(trackseta.at(i).at(j));
-//			std::cout<<"px py pz"<<px<<" "<<py<<" "<<pz<<std::endl;
-			//myPtHist->Fill( trackspt.at(i).at(j), 1./ trackspt.at(i).at(j) );
-			//myPxPyHist->Fill(px,py);
-			//myPzHist->Fill(pz);
-		}
-	}
-*/
+
+/*                        px = PC_vTrack_pt[i][j] * cos( PC_vTrack_phi[i][j] );
+                        py = PC_vTrack_pt[i][j] * sin( PC_vTrack_phi[i][j] );
+                        pz = PC_vTrack_pt[i][j] * sinh( PC_vTrack_eta[i][j] );
+
+                        h.FillTH1(h.ind_ptHist, PC_vTrack_pt[i][j]);
+                        h.FillTH1(h.ind_pzHist, pz);
+
+                      std::cout<<"pxpypz"<<px<<" "<<py<<" "<<pz<<std::endl;   
+          //                    FillTH2(ind_pxpyHist, px,py);
+               //       FillTH2(0,px,py); */
+              //          j++;
+            //     }
+          //       i++;
+
+        // }
+	
+
 	
       }
    };
 //	std::cout<<"launch function"<<std::endl;
    // Launch the parallel processing of the tree
-	std::cout<<"here"<<std::endl;
+//	std::cout<<"here"<<std::endl;
    tp.Process(myFunction);
    // Use the TThreadedObject::Merge method to merge the thread private histograms
    // into the final result
 	
-   auto ptHistMerged = h.ptHist->Merge();
-   auto pzHistMerged = h.pzHist->Merge();
-   auto pxpyHistMerged = h.pxpyHist->Merge();
-   
-
-
- // ptHistMerged->DrawCopy();
-	TFile* outfile = new TFile("test1.root","RECREATE");
-	//WriteThreadedObjects();
-	TH1D* hpt = (TH1D*)ptHistMerged->Clone();
-	TH1D* hpz = (TH1D*)pzHistMerged->Clone();
-	TH2D* hpxpy = (TH2D*)pxpyHistMerged->Clone();
-	outfile->Write();
-
+  
+  h.WriteHist();
 	
    return 0;
 }
+#endif
+
