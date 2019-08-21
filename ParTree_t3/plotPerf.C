@@ -63,6 +63,11 @@ int plotPerf(){
 	double times_com [] = { 27.8, 15.2, 18.2, 7.6, 6.8, 7.2, 9.8, 8.2, 9.0, 10.2, 11.2};
 	double timeserr_com [] = { 5.2, 1.1, 15.9, 0.5, 0.4, 0.4, 2.5, 0.8, 0.0, 1.1, 0.8 };
 
+	//n trials
+	double rn = sqrt(5);
+	for(int i=0; i<n; i++){
+		timeserr_com[i] = timeserr_com[i]/rn;
+	}
 
 	double nthreads_classic [] = {0};
 	double timeserrx_classic [] = {0};
@@ -128,6 +133,12 @@ mg->Draw("AC*");
 
 	double times_size_ser [] = {4.4, 6.0, 10.4, 7.8, 12.0, 15.0, 22.8, 17.4, 28.2};
 	double timeserr_size_ser [] = {0.5, 0, 7.6, 0.4, 2.3, 0 , 13.5, 0.9, 8.3};
+
+	
+   for(int i=0; i<9; i++){
+		timeserr_size_par[i] = timeserr_size_par[i]/rn;
+		timeserr_size_ser[i] = timeserr_size_ser[i]/rn;
+	}
 
 	TGraphErrors* g_size_par = new TGraphErrors(nfiles, ntracksum, times_size_par, ntrackserr, timeserr_size_par);
 	TGraphErrors* g_size_ser = new TGraphErrors(nfiles, ntracksum, times_size_ser, ntrackserr, timeserr_size_ser);
