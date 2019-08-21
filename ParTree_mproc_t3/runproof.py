@@ -17,7 +17,7 @@ def bash( bashCommand ):
 idatalist = open("bigdata.list","r")
 
 idatafiles = [f.rstrip() for f in idatalist if ".root" in f ]
-print(idatafiles)
+#print(idatafiles)
 
 
 cmd = "./compiledproofmacro "
@@ -25,7 +25,7 @@ for ifile in idatafiles:
 	cmd = cmd + ifile + " "
 
 
-print cmd
+#print cmd
 os.system(cmd)
 	
 	

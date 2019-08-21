@@ -8,18 +8,10 @@
 #include "TTreeReader.h"
 #include "TTreeReaderValue.h"
 #include "myselector.C"
-#include "mytreevalues.c"
+
 class histset{
 	
 	public:
-	  // ROOT::TThreadedObject<TH1D> ptHist("ptHist", "p_{T} Distribution;p_{T};dN/p_{T}dp_{T}", 100, 0, 5);
-  	  // ROOT::TThreadedObject<TH1D> pzHist("pzHist", "p_{Z} Distribution;p_{Z};dN/dp_{Z}", 100, 0, 5);
-   	  // ROOT::TThreadedObject<TH2D> pxpyHist("pxpyHist", "p_{X} vs p_{Y} Distribution;p_{X};p_{Y}", 100, -5., 5., 100, -5., 5.);
-	//	ROOT::TThreadedObject<TH1D> *ptHist;
-	//	ROOT::TThreadedObject<TH1D> *pzHist;
-		
-	//	ROOT::TThreadedObject<TH2D> *pxpyHist;
-
 	   histset();	
 	   void init(); 
 
@@ -27,7 +19,7 @@ class histset{
 	 //  void AnalyzeEntry(mytreevalues& s);
 
 	   //bookeeping enumeration: (if we do this we dont need to worry about hist ptr copies and merging)
-	   enum th1d_index{ind_ptHist, ind_pzHist, numTH1Hist};
+	   enum th1d_index{ind_ptHist, ind_pzHist, ind_numpcHist, numTH1Hist};
 	   enum th2d_index{ind_pxpyHist, numTH2Hist};
 
 
@@ -37,7 +29,7 @@ class histset{
 
 
 	  //locate the histogram and perform ptr copying 
-	  void FillTH1(int index, double x);
+	  void FillTH1(int index, double x, double w);
 	  void FillTH2(int index, double x, double y);
 	
 	  void WriteHist(); 
@@ -53,29 +45,23 @@ histset::histset(){
 
 	init();
 
-	std::cout<<"num th2 "<< numTH2Hist<<std::endl;
 }
 void histset::init(){
-	 // ptHist = new ROOT::TThreadedObject<TH1D>("ptHist", "p_{T} Distribution;p_{T};dN/p_{T}dp_{T}", 100, 0, 5);
-         // pzHist = new ROOT::TThreadedObject<TH1D>("pzHist", "p_{Z} Distribution;p_{Z};dN/dp_{Z}", 100, 0, 5);
-         // pxpyHist = new ROOT::TThreadedObject<TH2D>("pxpyHist", "p_{X} vs p_{Y} Distribution;p_{X};p_{Y}", 100, -5., 5., 100, -5., 5.);
-
 //init TH1D
 	TH1Manager.at(ind_ptHist) = new ROOT::TThreadedObject<TH1D>("ptHist", "p_{T} Distribution;p_{T};dN/p_{T}dp_{T}", 100, 0, 5);
-	//TH1Manager.at(ind_pzHist) = new ROOT::TThreadedObject<TH1D>("pzHist", "p_{Z} Distribution;p_{Z};dN/dp_{Z}", 100, 0, 5);
-
+	TH1Manager.at(ind_pzHist) = new ROOT::TThreadedObject<TH1D>("pzHist", "p_{Z} Distribution;p_{Z};dN/dp_{Z}", 100, 0, 5);
+	TH1Manager.at(ind_numpcHist) = new ROOT::TThreadedObject<TH1D>("numpcHist", "Number of PC", 51, 0, 50);
 // init TH2D
-        std::cout<<"init th2"<<std::endl;
 	TH2Manager.at(ind_pxpyHist) = new ROOT::TThreadedObject<TH2D>("pxpyHist", "p_{X} vs p_{Y} Distribution;p_{X};p_{Y}", 100, -5., 5., 100, -5., 5.);
 
 
 }
-void histset::FillTH1(int index, double x){
+void histset::FillTH1(int index, double x, double w=1){
+	//we must make ptr copies for performance reasons when trying to fill a histogram
 	auto myhist = TH1Manager.at(index)->Get();
-	myhist->Fill(x);
+	myhist->Fill(x,w);
 }
 void histset::FillTH2(int index, double x, double y){
-	std::cout<<"entered fill"<<std::endl;
 	auto myhist = TH2Manager.at(index)->Get();
 	myhist->Fill(x,y);
 }
@@ -83,53 +69,48 @@ void histset::WriteHist(){
 
 	TFile* outfile = new TFile("testset.root","RECREATE");
 
-	for(int i=0; i<numTH1Hist-1; i++){
+	for(int i=0; i<numTH1Hist; i++){
 		auto histmerged = TH1Manager.at(i)->Merge();
 		TH1D* h = (TH1D*) histmerged->Clone();
 		outfile->WriteObject(h, h->GetName() );
 	}
-	
+
+	for(int i=0; i<numTH2Hist; i++){
+		auto histmerged = TH2Manager.at(i)->Merge();
+		TH2D* h = (TH2D*) histmerged->Clone();
+		outfile->WriteObject(h, h->GetName() );
+	}	
 
 }
 void histset::AnalyzeEntry(myselector& s){
-//void histset::AnalyzeEntry(mytreevalues& s){
-   //	int i=0;
-    //    int j=0;
-        double px,py,pz;
-	//always make a local copy, if its a value dereference
+   	
+	//always make a local copy, if its a value dereference.. if you dont do this scope/dereferencing will get really weird, clunky, and unmanageable
 	//have to auto& or myreader will try to register copy of the readerarray ptr
 	auto& PC_vTrack_pt = s.PC_vTrack_pt;
-	
+	auto& PC_vTrack_phi = s.PC_vTrack_phi;
+	auto& PC_vTrack_eta = s.PC_vTrack_eta;
+
+	auto numberOfPC = *(s.numberOfPC);
+
+	double px,py,pz;
+
+	FillTH1(ind_numpcHist, numberOfPC);
+
 	for(int i=0; i<PC_vTrack_pt.GetSize(); i++){
                 for(int j=0; j<PC_vTrack_pt[i].size(); j++){
-                        std::cout<<PC_vTrack_pt[i][j]<<" ";
 
-                        FillTH1(ind_ptHist, PC_vTrack_pt[i][j]);
+			px = PC_vTrack_pt[i][j] * cos( PC_vTrack_phi[i][j] );
+			py = PC_vTrack_pt[i][j] * sin( PC_vTrack_phi[i][j] );
+			pz = PC_vTrack_pt[i][j] * sinh( PC_vTrack_eta[i][j] );
+
+
+                        FillTH1(ind_ptHist, PC_vTrack_pt[i][j], 1./PC_vTrack_pt[i][j]);
+			FillTH1(ind_pzHist, pz);
+			
+			FillTH2(ind_pxpyHist, px, py);
                 }
         }
-
-		
 	
-       // for( auto itr = s.PC_vTrack_pt.begin() ; itr != s.PC_vTrack_pt.end(); ++itr){
-       		// for( auto itrj = itr->begin(); itrj != itr->end(); ++itrj){
-       	// for( auto itr = s.PC_vTrack_pt->begin() ; itr != s.PC_vTrack_pt->end(); ++itr){
-       	//	 for( auto itrj = itr->begin(); itrj != itr->end(); ++itrj){
-//	for(int i	
-//
-  //          		px = (*(s.PC_vTrack_pt))[i][j] * cos( (*(s.PC_vTrack_phi))[i][j] );
-    //        		py = (*(s.PC_vTrack_pt))[i][j] * sin( (*(s.PC_vTrack_phi))[i][j] );
-      //      		pz = (*(s.PC_vTrack_pt))[i][j] * sinh( (*(s.PC_vTrack_eta))[i][j] );
-
-        //        	FillTH1(ind_ptHist, (*(s.PC_vTrack_pt))[i][j]);
-            //    	FillTH1(ind_pzHist, pz);
-			
-	//		std::cout<<"pxpypz"<<px<<" "<<py<<" "<<pz<<std::endl;	
-          //     		FillTH2(ind_pxpyHist, px,py);
-               // 	FillTH2(0,px,py);
-          //              j++;
-            //     }
-              //   i++;
-       	// }
 	
 
 }

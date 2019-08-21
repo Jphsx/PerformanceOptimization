@@ -216,8 +216,8 @@ def runProcess(cmd):
 
 #do a thread test on the big data list
 print "running full big list, multithreading with 8 threads"
-cmd = "python runmacro.py 0 8"
-deltaTime = runProcess(cmd)
-print "time running : ", deltaTime
+#cmd = "python runmacro.py 2 8"
+#deltaTime = runProcess(cmd)
+#print "time running : ", deltaTime
 
 	

@@ -1,0 +1,45 @@
+
+real    1m34.268s
+user    0m1.760s
+sys     0m0.928s
+['/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_100.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_110.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_120.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_130.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_141.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_155.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_166.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_176.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_193.root']
+./compiledproofmacro /home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_100.root /home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_110.root /home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_120.root /home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_130.root /home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_141.root /home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_155.root /home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_166.root /home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_176.root /home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_193.root
+ +++ Starting PROOF-Lite with 16 workers +++
+Opening connections to workers: OK (16 workers)
+Setting up worker servers: OK (16 workers)
+PROOF set to parallel mode (16 workers)
+
+Info in <TProofLite::SetQueryRunning>: starting query: 1
+Info in <TProofQueryResult::SetRunning>: nwrks: 16
+Looking up for exact location of files: OK (9 files)
+Looking up for exact location of files: OK (9 files)
+Info in <TPacketizer::TPacketizer>: Initial number of workers: 16
+Validating files: OK (9 files)
+[TProof::Progress] Total 1576737 events |====================| 100.00 % [18932.7 evts/s, 12.7 MB/s, time left: 0.0 s]
+ Query processing time: 83.3 s
+Lite-0: all output objects have been merged
+
+real    1m31.068s
+user    0m1.701s
+sys     0m0.833s
+['/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_100.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_110.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_120.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_130.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_141.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_155.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_166.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_176.root', '/home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_193.root']
+./compiledproofmacro /home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_100.root /home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_110.root /home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_120.root /home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_130.root /home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_141.root /home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_155.root /home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_166.root /home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_176.root /home/t3-ku/janguian/storeUser/jsingera/DPG/PC/Run2018/SingleMuon/crab_SingleMu_Run2018D_AOD/190611_214910/0000/Run2018_193.root
+ +++ Starting PROOF-Lite with 16 workers +++
+Opening connections to workers: OK (16 workers)
+Setting up worker servers: OK (16 workers)
+PROOF set to parallel mode (16 workers)
+
+Info in <TProofLite::SetQueryRunning>: starting query: 1
+Info in <TProofQueryResult::SetRunning>: nwrks: 16
+Looking up for exact location of files: OK (9 files)
+Looking up for exact location of files: OK (9 files)
+Info in <TPacketizer::TPacketizer>: Initial number of workers: 16
+Validating files: OK (9 files)
+[TProof::Progress] Total 1576737 events |====================| 100.00 % [18642.6 evts/s, 12.5 MB/s, time left: 0.0 s]
+ Query processing time: 84.6 s
+Lite-0: all output objects have been merged                                                         
+
+real    1m32.741s
+user    0m1.741s
+sys     0m0.830s
+:
