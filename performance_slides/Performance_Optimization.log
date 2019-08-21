@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.30)  8 AUG 2019 17:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.30)  20 AUG 2019 23:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1274,59 +1274,109 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 54.
+<Multithreading.jpg, id=69, 293.59688pt x 186.6975pt>
+File: Multithreading.jpg Graphic file (type jpg)
+ <use Multithreading.jpg>
+Package pdftex.def Info: Multithreading.jpg used on input line 69.
+(pdftex.def)             Requested size: 132.11736pt x 84.01309pt.
+LaTeX Font Info:    Try loading font information for U+msa on input line 69.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 54.
+LaTeX Font Info:    Try loading font information for U+msb on input line 69.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 54.
+line 69.
 
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-Overfull \vbox (9.6867pt too high) detected at line 54
- []
-
 [3
 
-] <../ParTree/test1plot.pdf, id=103, 569.12625pt x 421.575pt>
+ <./Multithreading.jpg>]
+Overfull \vbox (12.1867pt too high) detected at line 92
+ []
+
+[4
+
+] <../ParTree/test1plot.pdf, id=129, 569.12625pt x 421.575pt>
 File: ../ParTree/test1plot.pdf Graphic file (type pdf)
 
 <use ../ParTree/test1plot.pdf>
-Package pdftex.def Info: ../ParTree/test1plot.pdf used on input line 75.
+Package pdftex.def Info: ../ParTree/test1plot.pdf used on input line 113.
 (pdftex.def)             Requested size: 170.73918pt x 126.47346pt.
- [4
+ [5
 
- <../ParTree/test1plot.pdf, page is rotated 90 degrees>] [5
+ <../ParTree/test1plot.pdf, page is rotated 90 degrees>] [6
 
-] [6
+] [7
 
 ]
-<../ParTree_t3/test1plott3.pdf, id=235, 569.12625pt x 421.575pt>
+<../ParTree_t3/test1plott3.pdf, id=262, 569.12625pt x 421.575pt>
 File: ../ParTree_t3/test1plott3.pdf Graphic file (type pdf)
 
 <use ../ParTree_t3/test1plott3.pdf>
-Package pdftex.def Info: ../ParTree_t3/test1plott3.pdf used on input line 199.
-(pdftex.def)             Requested size: 170.73918pt x 126.47346pt.
- [7
-
- <../ParTree_t3/test1plott3.pdf, page is rotated 90 degrees>]
-<../ParTree_t3/sizetestt3.pdf, id=305, 569.12625pt x 421.575pt>
-File: ../ParTree_t3/sizetestt3.pdf Graphic file (type pdf)
-
-<use ../ParTree_t3/sizetestt3.pdf>
-Package pdftex.def Info: ../ParTree_t3/sizetestt3.pdf used on input line 219.
+Package pdftex.def Info: ../ParTree_t3/test1plott3.pdf used on input line 239.
 (pdftex.def)             Requested size: 170.73918pt x 126.47346pt.
  [8
 
- <../ParTree_t3/sizetestt3.pdf, page is rotated 90 degrees>]
+ <../ParTree_t3/test1plott3.pdf, page is rotated 90 degrees>]
+<../ParTree_t3/sizetestt3.pdf, id=332, 569.12625pt x 421.575pt>
+File: ../ParTree_t3/sizetestt3.pdf Graphic file (type pdf)
+
+<use ../ParTree_t3/sizetestt3.pdf>
+Package pdftex.def Info: ../ParTree_t3/sizetestt3.pdf used on input line 259.
+(pdftex.def)             Requested size: 170.73918pt x 126.47346pt.
+ [9
+
+ <../ParTree_t3/sizetestt3.pdf, page is rotated 90 degrees>] [10
+
+] [11
+
+] [12
+
+] [13
+
+]
+<cpusage.png, id=511, 752.8125pt x 134.5025pt>
+File: cpusage.png Graphic file (type png)
+ <use cpusage.png>
+Package pdftex.def Info: cpusage.png used on input line 381.
+(pdftex.def)             Requested size: 188.20265pt x 33.62553pt.
+
+<terminaltree.png, id=512, 676.5275pt x 654.445pt>
+File: terminaltree.png Graphic file (type png)
+ <use terminaltree.png>
+Package pdftex.def Info: terminaltree.png used on input line 381.
+(pdftex.def)             Requested size: 135.3031pt x 130.88667pt.
+
+<znunuMET.pdf, id=513, 569.12625pt x 385.44pt>
+File: znunuMET.pdf Graphic file (type pdf)
+ <use znunuMET.pdf>
+Package pdftex.def Info: znunuMET.pdf used on input line 381.
+(pdftex.def)             Requested size: 113.82323pt x 77.08662pt.
+
+<DYdphCMI.pdf, id=514, 569.12625pt x 385.44pt>
+File: DYdphCMI.pdf Graphic file (type pdf)
+ <use DYdphCMI.pdf>
+Package pdftex.def Info: DYdphCMI.pdf used on input line 381.
+(pdftex.def)             Requested size: 113.82323pt x 77.08662pt.
+
+Overfull \vbox (10.52663pt too high) detected at line 381
+ []
+
+[14
+
+ <./cpusage.png (PNG copy)> <./terminaltree.png (PNG copy)> <./znunuMET.pdf, pa
+ge is rotated 90 degrees> <./DYdphCMI.pdf, page is rotated 90 degrees>]
+[15
+
+]
 \tf@nav=\write6
 \openout6 = `Performance_Optimization.nav'.
 
@@ -1336,11 +1386,11 @@ Package pdftex.def Info: ../ParTree_t3/sizetestt3.pdf used on input line 219.
 \tf@snm=\write8
 \openout8 = `Performance_Optimization.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 220.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 220.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 394.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 394.
  (./Performance_Optimization.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 220.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 220.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 394.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 394.
 Package rerunfilecheck Info: File `Performance_Optimization.out' has not change
 d.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
@@ -1349,14 +1399,14 @@ d.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 220.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 394.
  ) 
 Here is how much of TeX's memory you used:
- 17737 strings out of 493029
- 336700 string characters out of 6136233
- 415344 words of memory out of 5000000
- 20805 multiletter control sequences out of 15000+600000
- 8971 words of font info for 34 fonts, out of 8000000 for 9000
+ 17802 strings out of 493029
+ 337640 string characters out of 6136233
+ 416344 words of memory out of 5000000
+ 20849 multiletter control sequences out of 15000+600000
+ 9271 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,15n,55p,424b,771s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
@@ -1371,10 +1421,10 @@ blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt8.pfb>
-Output written on Performance_Optimization.pdf (8 pages, 168157 bytes).
+Output written on Performance_Optimization.pdf (15 pages, 655555 bytes).
 PDF statistics:
- 418 PDF objects out of 1000 (max. 8388607)
- 308 compressed objects within 4 object streams
- 17 named destinations out of 1000 (max. 500000)
- 58 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 698 PDF objects out of 1000 (max. 8388607)
+ 524 compressed objects within 6 object streams
+ 31 named destinations out of 1000 (max. 500000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 
